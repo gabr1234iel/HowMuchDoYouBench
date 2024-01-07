@@ -6,8 +6,13 @@ import { useCallback } from 'react';
 import LoginScreen from './App/Screen/LoginScreen/LoginScreen';
 import { ClerkProvider, SignedIn, SignedOut  } from "@clerk/clerk-expo";
 import * as SecureStore from "expo-secure-store";
- 
+import { NavigationContainer } from '@react-navigation/native';
+import TabNavigation from './App/Navigations/TabNavigation';
+import { SafeAreaView } from 'react-native-safe-area-context';
+
+
 const tokenCache = {
+  
   async getToken(key) {
     try {
       return SecureStore.getItemAsync(key);
@@ -46,15 +51,19 @@ export default function App() {
 
   return (
     <ClerkProvider tokenCache={tokenCache} publishableKey={'pk_test_YW1hemluZy1oYWdmaXNoLTUyLmNsZXJrLmFjY291bnRzLmRldiQ'}>
-      <View style={styles.container} onLayout={onLayoutRootView}>
-        <SignedIn>
-          <Text>You are Signed in</Text>
-        </SignedIn>
-        <SignedOut>
-          <LoginScreen/>
-        </SignedOut>
-        <StatusBar style="auto" />
-      </View>
+       <SafeAreaView style={styles.safeArea}>
+          <View style={styles.container} onLayout={onLayoutRootView}>
+            <SignedIn>
+              <NavigationContainer>
+                <TabNavigation/>
+              </NavigationContainer>
+            </SignedIn>
+            <SignedOut>
+              <LoginScreen/>
+            </SignedOut>
+            <StatusBar style="auto" />
+          </View>
+       </SafeAreaView>
     </ClerkProvider>
   );
 }
@@ -62,7 +71,12 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f7f7f7',
     paddingTop:45,
   },
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#f7f7f7', // Set this to your desired page color
+  },
+  
 });
