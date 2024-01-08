@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
     color: '#333',
     marginLeft: 24,  // Adjust left margin as needed
     marginTop: 52,   // Adjust top margin as needed
+    marginBottom: 24,
     textAlign: 'left',
   },
 });
