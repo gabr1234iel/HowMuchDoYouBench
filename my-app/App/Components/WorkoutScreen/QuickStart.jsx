@@ -2,9 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import SubheadingComponent from '../SubheadingComponent';
 
-
-
-
 const QuickStartComponent = ({ onStart }) => {
   return (
     <View style={styles.container}>

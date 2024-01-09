@@ -4,6 +4,7 @@ import TitleComponent from '../../Components/TitleComponent';
 import QuickStartComponent from '../../Components/WorkoutScreen/QuickStart';
 import MyTemplatesComponent from '../../Components/WorkoutScreen/MyTemplatesComponent';
 import ExampleTemplatesComponent from '../../Components/WorkoutScreen/ExampleTemplatesComponent';
+import HeadingComponent from '../../Components/HeadingComponent';
 
 
 
@@ -19,6 +20,7 @@ export default function StartWorkoutScreen() {
       <TitleComponent title="Start Workout" />
 
       <QuickStartComponent onStart={handleQuickStart} />
+      <HeadingComponent title="Templates" />
       <MyTemplatesComponent/>
       <ExampleTemplatesComponent/>
 

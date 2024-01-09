@@ -2,6 +2,7 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'; // Import FontAwesome
 import * as WebBrowser from "expo-web-browser";
+import * as Facebook from 'expo-auth-session/providers/facebook';
 import { useWarmUpBrowser } from "../../../hooks/useWarmUpBrowser";
 import { useOAuth } from "@clerk/clerk-expo";
 
