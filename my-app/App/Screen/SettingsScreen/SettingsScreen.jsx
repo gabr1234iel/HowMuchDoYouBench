@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useClerk } from '@clerk/clerk-expo';
-import TitleComponent from '../../Components/TitleComponent'; // Ensure this path is correct
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'; // Ensure this is installed
+import TitleComponent from '../../Components/TitleComponent';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 export default function SettingsScreen() {
   const { signOut } = useClerk();
