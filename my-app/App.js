@@ -1,3 +1,4 @@
+import app from './firebaseConfig';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
@@ -9,8 +10,7 @@ import * as SecureStore from "expo-secure-store";
 import { NavigationContainer } from '@react-navigation/native';
 import TabNavigation from './App/Navigations/TabNavigation';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import firebase from 'firebase/app';
-// import {config} from '';
+
 
 
 
