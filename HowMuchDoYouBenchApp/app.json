@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "hmdyb",
-    "slug": "hmdyb",
+    "name": "HowMuchDoYouBenchApp",
+    "slug": "HowMuchDoYouBenchApp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,17 +15,13 @@
       "**/*"
     ],
     "ios": {
-      "googleServicesFile": "./GoogleService-Info.plist",
-      "supportsTablet": true,
-      "bundleIdentifier": "com.wa2goose.hmdyb"
+      "supportsTablet": true
     },
     "android": {
-      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.wa2goose.hmdyb"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
