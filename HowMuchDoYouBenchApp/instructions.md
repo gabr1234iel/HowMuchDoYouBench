@@ -1,0 +1,1 @@
+it is a fitness app, to track progress. add friends, and socialise, built on expo + typescript + firebase :D
